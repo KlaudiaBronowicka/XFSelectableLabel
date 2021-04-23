@@ -22,8 +22,7 @@
         <controls:SelectableLabel
             TextColor="Black"
             Text="Here is some random text that you can select. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et odio in purus bibendum egestas. Vestibulum varius id metus in semper. Pellentesque facilisis risus imperdiet tortor congue fermentum. Duis sed consectetur dui. Vivamus vel sapien ut leo sodales suscipit vitae vitae purus. Vivamus molestie, quam vitae ornare consectetur, sem nulla gravida libero, eget sagittis mi nulla auctor lorem. Pellentesque euismod nunc non ante varius, auctor imperdiet arcu placerat. Ut fringilla fringilla odio, at tincidunt neque cursus non. Praesent fermentum rhoncus turpis at imperdiet. Integer in mi nibh. Cras sodales elementum dolor. Sed sagittis magna eget tempus lacinia. Donec enim mauris, dignissim ut vehicula non, commodo ac massa. Donec in facilisis ligula, vitae commodo neque. Donec pellentesque faucibus massa in gravida. Aliquam facilisis dui ac libero iaculis, at fringilla mauris egestas."
-            OnTextSelectedCommand="{Binding TextSelectedCommand}"
-            />
+            OnTextSelectedCommand="{Binding TextSelectedCommand}"/>
 
     </StackLayout>
 
