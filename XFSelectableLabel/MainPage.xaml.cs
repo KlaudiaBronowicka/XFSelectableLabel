@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XFSelectableLabel.ViewModels;
 
 namespace XFSelectableLabel
 {
@@ -13,6 +14,8 @@ namespace XFSelectableLabel
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = new MainViewModel();
         }
     }
 }

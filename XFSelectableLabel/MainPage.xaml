@@ -1,24 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XFSelectableLabel.MainPage">
+             xmlns:controls="clr-namespace:XFSelectableLabel.Controls"
+             x:Class="XFSelectableLabel.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="White">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
+    <StackLayout Padding="20" Spacing="20">
+        <Label Text="XFSelectableLabel" HorizontalTextAlignment="Center" FontSize="36" TextColor="Black"/>
+        <Label FontSize="16" TextColor="Black">
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        <Span Text="Currently selected text: "/>
+                        <Span Text="{Binding SelectedText}" FontAttributes="Bold"/>
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <controls:SelectableLabel
+            TextColor="Black"
+            Text="Here is some random text that you can select. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et odio in purus bibendum egestas. Vestibulum varius id metus in semper. Pellentesque facilisis risus imperdiet tortor congue fermentum. Duis sed consectetur dui. Vivamus vel sapien ut leo sodales suscipit vitae vitae purus. Vivamus molestie, quam vitae ornare consectetur, sem nulla gravida libero, eget sagittis mi nulla auctor lorem. Pellentesque euismod nunc non ante varius, auctor imperdiet arcu placerat. Ut fringilla fringilla odio, at tincidunt neque cursus non. Praesent fermentum rhoncus turpis at imperdiet. Integer in mi nibh. Cras sodales elementum dolor. Sed sagittis magna eget tempus lacinia. Donec enim mauris, dignissim ut vehicula non, commodo ac massa. Donec in facilisis ligula, vitae commodo neque. Donec pellentesque faucibus massa in gravida. Aliquam facilisis dui ac libero iaculis, at fringilla mauris egestas."
+            OnTextSelectedCommand="{Binding TextSelectedCommand}"
+            />
+
     </StackLayout>
 
 </ContentPage>
